@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=no">
+
+<title>যোগাযোগ করুন - বাংলাদেশ পাসপোর্ট অধিদপ্তর</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:
+        "Noto Sans Bengali",
+        "Noto Serif Bengali",
+        Arial,
+        sans-serif;
+    background:#f5fbfd;
+    color:#073d67;
+    overflow-x:hidden;
+}
+
+/* =========================
+   MAIN MOBILE SCREEN
+========================= */
+
+.page{
+    width:100%;
+    max-width:1024px;
+    min-height:100vh;
+    margin:auto;
+    background:#f7fcfd;
+    padding-bottom:105px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    height:116px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    padding:10px 42px 9px 42px;
+    position:relative;
+    z-index:5;
+    border-bottom:1px solid #edf1f2;
+}
+
+.logo{
+    width:112px;
+    height:112px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.header-text{
+    margin-left:18px;
+    line-height:1.2;
+}
+
+.header-title{
+    font-size:37px;
+    font-weight:900;
+    color:#075c49;
+    letter-spacing:-1.3px;
+    white-space:nowrap;
+}
+
+.header-subtitle{
+    margin-top:7px;
+    font-size:23px;
+    font-weight:600;
+    color:#103c61;
+    white-space:nowrap;
+}
+
+/* menu */
+
+.menu{
+    width:70px;
+    height:70px;
+    margin-left:auto;
+    border:1px solid #e1ebee;
+    border-radius:14px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:8px;
+}
+
+.menu span{
+    width:34px;
+    height:4px;
+    background:#08634f;
+    border-radius:5px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    height:325px;
+    position:relative;
+    overflow:hidden;
+
+    /*
+       এখানে আপনার ছবির hero background দিন
+       যেমন:
+       background-image:url("hero.jpg");
+    */
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.90) 0%,
+            rgba(255,255,255,.62) 48%,
+            rgba(255,255,255,.08) 100%
+        ),
+        url("hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    position:absolute;
+    left:55px;
+    top:34px;
+    width:570px;
+}
+
+.brush-title{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:395px;
+    height:82px;
+
+    padding:0 38px;
+
+    background:#075b46;
+    color:#fff;
+
+    font-size:43px;
+    font-weight:900;
+
+    border-radius:
+        52% 48% 45% 55%
+        / 45% 51% 49% 55%;
+
+    transform:rotate(-1deg);
+
+    text-shadow:0 1px 1px rgba(0,0,0,.15);
+}
+
+.hero-text{
+    margin-top:25px;
+    font-size:26px;
+    line-height:1.42;
+    font-weight:800;
+    color:#07375c;
+}
+
+/* =========================
+   CONTACT CARD
+========================= */
+
+.contact-card{
+    width:92%;
+    margin:-2px auto 0 auto;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.98),
+            rgba(255,255,255,.98)
+        );
+
+    border-radius:25px;
+
+    box-shadow:
+        0 3px 14px rgba(20,80,100,.10);
+
+    padding:25px 30px 22px;
+
+    position:relative;
+    z-index:3;
+}
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.card-heading{
+    display:flex;
+    align-items:center;
+    margin-bottom:21px;
+}
+
+.heading-icon{
+    width:82px;
+    height:82px;
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#168fe7;
+    font-size:57px;
+    font-weight:bold;
+
+    margin-right:22px;
+}
+
+.heading-text h2{
+    font-size:39px;
+    line-height:1.15;
+    color:#064f7f;
+    font-weight:900;
+}
+
+.heading-text p{
+    margin-top:5px;
+    font-size:23px;
+    color:#60788d;
+    font-weight:600;
+}
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.input-box{
+    height:100px;
+    border:2px solid #d4e2e9;
+    border-radius:17px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 0%,
+            #ffffff 70%,
+            #fbfdfe 100%
+        );
+
+    display:flex;
+    align-items:center;
+
+    padding:12px 17px;
+
+    margin-bottom:17px;
+}
+
+.input-icon{
+    width:62px;
+    height:62px;
+
+    border-radius:15px;
+
+    background:#f1f8fc;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#064b76;
+
+    font-size:34px;
+
+    margin-right:21px;
+
+    flex-shrink:0;
+}
+
+.input-text{
+    flex:1;
+}
+
+.input-title{
+    font-size:23px;
+    font-weight:800;
+    color:#637b90;
+}
+
+.required{
+    color:#e31e24;
+}
+
+.placeholder{
+    margin-top:5px;
+    font-size:18px;
+    color:#9baebb;
+    font-weight:600;
+}
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.send-btn{
+    width:100%;
+    height:80px;
+
+    border:0;
+    border-radius:45px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #168fe9,
+            #087fe4
+        );
+
+    color:white;
+
+    font-size:31px;
+    font-family:inherit;
+    font-weight:900;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+
+    margin-top:8px;
+
+    box-shadow:
+        0 5px 13px rgba(20,130,225,.18);
+
+    cursor:pointer;
+}
+
+.send-icon{
+    font-size:40px;
+    transform:rotate(-5deg);
+}
+
+/* =========================
+   SECURITY BOX
+========================= */
+
+.security-box{
+    min-height:91px;
+
+    background:#edf9ff;
+
+    border-radius:17px;
+
+    margin-top:19px;
+
+    display:flex;
+    align-items:center;
+
+    padding:12px 28px;
+}
+
+.security-icon{
+    width:62px;
+    font-size:42px;
+    color:#0876ca;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.security-divider{
+    height:54px;
+    width:1px;
+    background:#bcd5e3;
+    margin:0 22px;
+}
+
+.security-text{
+    font-size:19px;
+    line-height:1.45;
+    color:#174e75;
+    font-weight:700;
+}
+
+/* =========================
+   SERVICE ROW
+========================= */
+
+.service-row{
+    min-height:91px;
+    margin-top:20px;
+
+    background:#effcf9;
+
+    border-radius:17px;
+
+    display:grid;
+    grid-template-columns:
+        1fr 1fr 1fr 1fr;
+
+    align-items:center;
+}
+
+.service{
+    height:59px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-right:1px solid #c7e7df;
+
+    gap:15px;
+
+    color:#08644e;
+}
+
+.service:last-child{
+    border-right:0;
+}
+
+.service-icon{
+    width:49px;
+    height:49px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:37px;
+}
+
+.service-text{
+    font-size:18px;
+    line-height:1.25;
+    font-weight:800;
+}
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:103px;
+
+    max-width:1024px;
+    margin:auto;
+
+    background:#00583f;
+
+    z-index:20;
+
+    display:grid;
+    grid-template-columns:1fr 1.5fr 1fr;
+
+    align-items:center;
+
+    padding:0 45px;
+}
+
+.nav-item{
+    height:68px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:13px;
+
+    color:#fff;
+
+    font-size:21px;
+    font-weight:700;
+
+    border-radius:38px;
+
+    cursor:pointer;
+}
+
+.nav-item.active{
+    background:#087657;
+}
+
+.nav-icon{
+    font-size:32px;
+}
+
+.nav-item.back{
+    justify-content:flex-end;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .page{
+        padding-bottom:82px;
+    }
+
+    .header{
+        height:82px;
+        padding:7px 13px;
+    }
+
+    .logo{
+        width:67px;
+        height:67px;
+    }
+
+    .header-text{
+        margin-left:9px;
+    }
+
+    .header-title{
+        font-size:20px;
+        letter-spacing:-.5px;
+    }
+
+    .header-subtitle{
+        font-size:12px;
+        margin-top:3px;
+    }
+
+    .menu{
+        width:48px;
+        height:48px;
+        border-radius:10px;
+        gap:5px;
+    }
+
+    .menu span{
+        width:25px;
+        height:3px;
+    }
+
+    .hero{
+        height:245px;
+    }
+
+    .hero-content{
+        left:28px;
+        top:28px;
+        width:55%;
+    }
+
+    .brush-title{
+        min-width:0;
+        height:58px;
+        padding:0 24px;
+        font-size:27px;
+    }
+
+    .hero-text{
+        margin-top:17px;
+        font-size:16px;
+        line-height:1.5;
+    }
+
+    .contact-card{
+        width:92%;
+        padding:17px 12px 14px;
+        border-radius:22px;
+    }
+
+    .card-heading{
+        margin-bottom:14px;
+    }
+
+    .heading-icon{
+        width:61px;
+        height:61px;
+        font-size:43px;
+        margin-right:12px;
+    }
+
+    .heading-text h2{
+        font-size:26px;
+    }
+
+    .heading-text p{
+        font-size:14px;
+        line-height:1.35;
+    }
+
+    .input-box{
+        height:78px;
+        border-radius:13px;
+        padding:8px 11px;
+        margin-bottom:11px;
+    }
+
+    .input-icon{
+        width:48px;
+        height:48px;
+        border-radius:12px;
+        font-size:27px;
+        margin-right:12px;
+    }
+
+    .input-title{
+        font-size:17px;
+    }
+
+    .placeholder{
+        font-size:13px;
+        margin-top:3px;
+    }
+
+    .send-btn{
+        height:62px;
+        font-size:24px;
+        gap:13px;
+        margin-top:5px;
+    }
+
+    .send-icon{
+        font-size:30px;
+    }
+
+    .security-box{
+        min-height:70px;
+        margin-top:13px;
+        padding:8px 12px;
+        border-radius:13px;
+    }
+
+    .security-icon{
+        width:43px;
+        font-size:31px;
+    }
+
+    .security-divider{
+        height:42px;
+        margin:0 12px;
+    }
+
+    .security-text{
+        font-size:12px;
+    }
+
+    .service-row{
+        min-height:70px;
+        margin-top:13px;
+        border-radius:13px;
+    }
+
+    .service{
+        height:45px;
+        gap:5px;
+    }
+
+    .service-icon{
+        width:30px;
+        height:30px;
+        font-size:25px;
+    }
+
+    .service-text{
+        font-size:11px;
+    }
+
+    .bottom-nav{
+        height:72px;
+        padding:0 10px;
+    }
+
+    .nav-item{
+        height:49px;
+        font-size:13px;
+        gap:6px;
+    }
+
+    .nav-icon{
+        font-size:24px;
+    }
+
+    .nav-item.back{
+        justify-content:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <!-- আপনার আসল logo এখানে দিন -->
+        <img
+            class="logo"
+            src="logo.png"
+            alt="বাংলাদেশ পাসপোর্ট অধিদপ্তর">
+
+        <div class="header-text">
+            <div class="header-title">
+                বাংলাদেশ পাসপোর্ট অধিদপ্তর
+            </div>
+
+            <div class="header-subtitle">
+                পররাষ্ট্র মন্ত্রণালয়, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার
+            </div>
+        </div>
+
+        <div class="menu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="brush-title">
+                যোগাযোগ করুন
+            </div>
+
+            <div class="hero-text">
+                আপনার পাসপোর্ট সংক্রান্ত যে কোন সমস্যায়<br>
+                আমাদের সাথে যোগাযোগ করুন।<br>
+                আমরা দ্রুত আপনার সমস্যার সমাধান দেওয়ার<br>
+                চেষ্টা করব।
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT CARD ================= -->
+
+    <main class="contact-card">
+
+        <!-- CARD HEADING -->
+
+        <div class="card-heading">
+
+            <div class="heading-icon">
+                📝
+            </div>
+
+            <div class="heading-text">
+                <h2>আপনার তথ্য পাঠান</h2>
+
+                <p>
+                    নিচের ফর্মটি পূরণ করুন, আমরা দ্রুত আপনার সাথে যোগাযোগ করব।
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- NAME -->
+
+        <div class="input-box">
+
+            <div class="input-icon">
+                👤
+            </div>
+
+            <div class="input-text">
+
+                <div class="input-title">
+                    আপনার নাম <span class="required">*</span>
+                </div>
+
+                <div class="placeholder">
+                    (যেমন: মোঃ আব্দুল করিম)
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE -->
+
+        <div class="input-box">
+
+            <div class="input-icon">
+                ☎
+            </div>
+
+            <div class="input-text">
+
+                <div class="input-title">
+                    মোবাইল নাম্বার <span class="required">*</span>
+                </div>
+
+                <div class="placeholder">
+                    (১১ অংকের নাম্বার লিখুন)
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="input-box">
+
+            <div class="input-icon">
+                ✉
+            </div>
+
+            <div class="input-text">
+
+                <div class="input-title">
+                    ইমেইল ঠিকানা <span class="required">*</span>
+                </div>
+
+                <div class="placeholder">
+                    (যদি থাকে)
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="input-box">
+
+            <div class="input-icon">
+                ▤
+            </div>
+
+            <div class="input-text">
+
+                <div class="input-title">
+                    আপনার সমস্যার বিবরণ <span class="required">*</span>
+                </div>
+
+                <div class="placeholder">
+                    (পাসপোর্ট সংক্রান্ত সমস্যার বিস্তারিত লিখুন)
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEND -->
+
+        <button class="send-btn" onclick="sendMessage()">
+
+            <span class="send-icon">➤</span>
+
+            <span>বার্তা পাঠান</span>
+
+        </button>
+
+
+        <!-- SECURITY -->
+
+        <div class="security-box">
+
+            <div class="security-icon">
+                🛡
+            </div>
+
+            <div class="security-divider"></div>
+
+            <div class="security-text">
+
+                আপনার তথ্য সম্পূর্ণ নিরাপদ।<br>
+                এটি শুধুমাত্র পাসপোর্ট বিষয়ক সহায়তার জন্য ব্যবহৃত হবে।
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div class="service-row">
+
+            <div class="service">
+
+                <div class="service-icon">🛡</div>
+
+                <div class="service-text">
+                    নিরাপদ<br>
+                    সেবা
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">◷</div>
+
+                <div class="service-text">
+                    দ্রুত<br>
+                    সমাধান
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">♧</div>
+
+                <div class="service-text">
+                    ২৪/৭<br>
+                    সহায়তা
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">▣</div>
+
+                <div class="service-text">
+                    সরকারি<br>
+                    পরামর্শ
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ================= BOTTOM NAV ================= -->
+
+<nav class="bottom-nav">
+
+    <div
+        class="nav-item"
+        onclick="goHome()">
+
+        <span class="nav-icon">⌂</span>
+        <span>হোম</span>
+
+    </div>
+
+
+    <div class="nav-item active">
+
+        <span class="nav-icon">☎</span>
+        <span>যোগাযোগ</span>
+
+    </div>
+
+
+    <div
+        class="nav-item back"
+        onclick="goBack()">
+
+        <span class="nav-icon">←</span>
+        <span>পিছনে যান</span>
+
+    </div>
+
+</nav>
+
+
+<script>
+
+function sendMessage(){
+
+    /*
+      এখানে আপনার success.html
+      পেজে পাঠানো হবে।
+    */
+
+    window.location.href = "success.html";
+}
+
+
+function goHome(){
+
+    window.location.href = "index.html";
+}
+
+
+function goBack(){
+
+    window.history.back();
+}
+
+</script>
+
+</body>
+</html>
